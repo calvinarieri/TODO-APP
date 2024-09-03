@@ -13,7 +13,7 @@ export default function App() {
 
   function addToDo(value) {
     if (value.length > 10) {
-      setTodos([...todos, { key: todos.length + 1, todo: value }]);
+      setTodos([...todos, { key: Math.random(), todo: value }]);
     } else {
       Alert.alert("Short to-do description", "Do not submit a to-do with less than ten characters");
     }
@@ -54,7 +54,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,   
+    flex: 1 ,
   },
   content: {
     flex: 1,
